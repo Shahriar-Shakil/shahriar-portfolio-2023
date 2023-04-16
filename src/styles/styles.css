@@ -1,0 +1,51 @@
+/* for custom loader */
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Buttons */
+
+.button-primary {
+  @apply leading-normal bg-light-alpha-25 border border-light-alpha-40 inline-block text-main-color font-medium capitalize text-base cursor-pointer select-none relative overflow-hidden align-middle transition-[color] duration-[0.3s] ease-[ease] px-[1.75em] py-[0.625em] rounded-[1.875rem] border-solid  hover:text-white;
+}
+.button-primary::before {
+  @apply content-[""] absolute top-0 left-0 h-full w-0 bg-main-color -z-10 transition-[width] duration-300;
+}
+.button-primary:hover::before {
+  @apply w-full;
+}
