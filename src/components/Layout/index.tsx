@@ -35,10 +35,10 @@ export default function Layout({ children, className }: Props) {
                       >
                         {open ? (
                           <XMarkIcon
-                            className={` h-6 w-6 text-purple-500 hover:scale-[2] transition-all duration-300 delay-300`}
+                            className={` h-6 w-6 text-main-color hover:scale-[2] transition-all duration-300 delay-300`}
                           />
                         ) : (
-                          <Bars3Icon className=" h-8 w-8 text-purple-500  hover:rotate-45 transition-all duration-300 delay-300 transform" />
+                          <Bars3Icon className=" h-8 w-8 text-main-color  hover:rotate-45 transition-all duration-300 delay-300 transform" />
                         )}
                       </Disclosure.Button>
                       <Transition
@@ -70,7 +70,7 @@ export default function Layout({ children, className }: Props) {
                                 <li className="text-center">
                                   <Link
                                     className="relative text-[2rem] capitalize text-accent-700 block font-semibold py-3 px-4 leading-8"
-                                    href="/"
+                                    href="/about"
                                   >
                                     About
                                   </Link>
@@ -78,7 +78,7 @@ export default function Layout({ children, className }: Props) {
                                 <li className="text-center">
                                   <Link
                                     className="relative text-[2rem] capitalize text-accent-700 block font-semibold py-3 px-4 leading-8"
-                                    href="/"
+                                    href="/portfolio"
                                   >
                                     Portfolio
                                   </Link>
@@ -86,7 +86,7 @@ export default function Layout({ children, className }: Props) {
                                 <li className="text-center">
                                   <Link
                                     className="relative text-[2rem] capitalize text-accent-700 block font-semibold py-3 px-4 leading-8"
-                                    href="/"
+                                    href="/contact"
                                   >
                                     Contact
                                   </Link>
