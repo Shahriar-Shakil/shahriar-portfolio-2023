@@ -16,7 +16,7 @@ body {
   @apply absolute rounded-full;
 }
 .circle-1 {
-  @apply h-14 w-14 bg-accent-400 top-[10%] left-[5%] opacity-[0.3] animate-[zoom-in-zoom-out_8s_ease-in-out_infinite];
+  @apply h-14 w-14 bg-accent-400 top-[10%] left-[5%] opacity-[0.3] animate-[zoom-in-zoom-out_5s_ease-in-out_infinite];
 }
 .circle-2 {
   @apply h-[5rem] w-[5rem] bg-main-color top-[50%] left-[30%] animate-[bounce_5s_ease-in-out_infinite] opacity-[0.4];
@@ -25,7 +25,7 @@ body {
   @apply h-[7.5rem] w-[7.5rem] bg-white top-[40%] right-[-3.75rem] opacity-[0.6];
 }
 .circle-4 {
-  @apply h-[3.125rem] w-[3.125rem] bg-accent-300 top-[80%] left-[-1.75rem] opacity-[0.6] animate-[bounce_10s_ease-in-out_infinite];
+  @apply h-[3.125rem] w-[3.125rem] bg-accent-300 top-[80%] left-[-1.75rem] opacity-[0.6] animate-[bounce_7s_ease-in-out_infinite];
 }
 
 @keyframes zoom-in-zoom-out {

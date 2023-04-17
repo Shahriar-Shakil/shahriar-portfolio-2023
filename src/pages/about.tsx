@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Education from "@/components/UI/Education";
+import Experience from "@/components/UI/Experience";
 
 let skills = [
   "JavaScript Es6",
@@ -78,7 +79,9 @@ export default function AboutPage() {
                   {" "}
                   <Education />
                 </Tab.Panel>
-                <Tab.Panel>Content 2</Tab.Panel>
+                <Tab.Panel>
+                  <Experience />
+                </Tab.Panel>
               </Tab.Panels>
             </Tab.Group>
           </div>
