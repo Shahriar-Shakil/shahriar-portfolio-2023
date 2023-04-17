@@ -6,6 +6,7 @@ import { Tab } from "@headlessui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Education from "@/components/UI/Education";
 import Experience from "@/components/UI/Experience";
+import { Fragment } from "react";
 
 let skills = [
   "JavaScript Es6",
@@ -52,39 +53,37 @@ export default function AboutPage() {
               </span>
             ))}
           </div>
-          <div>
-            <Tab.Group>
-              <Tab.List>
-                <Tab>
-                  {({ selected }) => (
-                    <button
-                      className={`${selected ? "selected" : ""} tab-button`}
-                    >
-                      Education
-                    </button>
-                  )}
-                </Tab>
-                <Tab>
-                  {({ selected }) => (
-                    <button
-                      className={`${selected ? "selected" : ""} tab-button`}
-                    >
-                      Experience
-                    </button>
-                  )}
-                </Tab>
-              </Tab.List>
-              <Tab.Panels className="mt-5">
-                <Tab.Panel>
-                  {" "}
-                  <Education />
-                </Tab.Panel>
-                <Tab.Panel>
-                  <Experience />
-                </Tab.Panel>
-              </Tab.Panels>
-            </Tab.Group>
-          </div>
+
+          <Tab.Group defaultIndex={1}>
+            <Tab.List>
+              <Tab as={Fragment}>
+                {({ selected }) => (
+                  <button
+                    className={`${selected ? "selected" : ""} tab-button`}
+                  >
+                    Education
+                  </button>
+                )}
+              </Tab>
+              <Tab as={Fragment}>
+                {({ selected }) => (
+                  <button
+                    className={`${selected ? "selected" : ""} tab-button`}
+                  >
+                    Experience
+                  </button>
+                )}
+              </Tab>
+            </Tab.List>
+            <Tab.Panels className="mt-5">
+              <Tab.Panel>
+                <Education />
+              </Tab.Panel>
+              <Tab.Panel>
+                <Experience />
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
         </div>
       </div>
     </Layout>

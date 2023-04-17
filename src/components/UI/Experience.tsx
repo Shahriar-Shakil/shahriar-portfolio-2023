@@ -50,6 +50,12 @@ export default function Experience({}: Props) {
             routes, Hooks for State and Context to allow functional components,
             and Custom hooks to log in and use the Firebase backend.
           </li>
+          <li>
+            I also had the opportunity to work on a{" "}
+            <span className="font-semibold">headless Next.js</span> blog site
+            where I gained experience with server-side rendering (SSR) and
+            static site generation (SSG) using Next.js.
+          </li>
         </ul>
       </li>
 
@@ -98,14 +104,16 @@ export default function Experience({}: Props) {
         <ul className="mt-4 list-disc list-inside text-base font-normal text-gray-500 dark:text-gray-400">
           <li>
             Worked on updating the previous PHP website of the e-Filing system
-            (nothi.gov.bd) to a React web app as a junior developer.
+            <span className="font-semibold"> (nothi.gov.bd)</span> to a React
+            web app as a junior developer.
           </li>
           <li>
             Focused on creating reusable components that could be used
             throughout the application.
           </li>
           <li>
-            Integrated REST APIs using Redux-Saga to enable seamless
+            Integrated REST APIs using{" "}
+            <span className="font-semibold">Redux-Saga</span> to enable seamless
             communication between the front-end and back-end.
           </li>
           <li>
