@@ -91,7 +91,7 @@ export default function AboutPage() {
                         I had the great opportunity to study and get to code
                         alongside experts from Scrimba and many like Cassidy
                         Williams, Kevin Powell while I was enrolled in the
-                        Scrimba's Frontend Developer Career Path.
+                        Scrimba&apos;s Frontend Developer Career Path.
                       </p>
                     </li>
                     <li className="mb-10 ml-4">
