@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
+import Education from "@/components/UI/Education";
 
 let skills = [
   "JavaScript Es6",
@@ -75,52 +76,7 @@ export default function AboutPage() {
               <Tab.Panels className="mt-5">
                 <Tab.Panel>
                   {" "}
-                  <ol className="relative border-l border-main-color dark:border-gray-700">
-                    <li className="mb-10 ml-4">
-                      <div className="absolute w-3 h-3 bg-main-color rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-                      <time className="mb-1 text-sm font-normal leading-none text-main-color dark:text-gray-500">
-                        2021-2022
-                      </time>
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        Frontend Career Path -{" "}
-                        <span className="font-light text-[18px]">
-                          Scrimba Coding School
-                        </span>
-                      </h3>
-                      <p className="mt-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                        I had the great opportunity to study and get to code
-                        alongside experts from Scrimba and many like Cassidy
-                        Williams, Kevin Powell while I was enrolled in the
-                        Scrimba&apos;s Frontend Developer Career Path.
-                      </p>
-                    </li>
-                    <li className="mb-10 ml-4">
-                      <div className="absolute w-3 h-3 bg-main-color rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
-                      <time className="mb-1 text-sm font-normal leading-none text-main-color dark:text-gray-500">
-                        2022
-                      </time>
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                        Think in Redux Way -{" "}
-                        <span className="font-light text-[18px]">
-                          Learn with Sumit
-                        </span>
-                      </h3>
-                      <p className="mt-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                        I recently completed the &quot;Think In a Redux
-                        Way&quot; course from Learn with Sumit, which was a
-                        comprehensive program focused on the latest Redux
-                        methods like Redux Toolkit and RTK Query.
-                      </p>
-                      <a
-                        className="mt-2  button-primary "
-                        href="https://learnwithsumit.com/certificates/verify/LWSCTXN-HRICBP4I"
-                        target="_blank"
-                      >
-                        <span className="">Certificate</span>
-                        <ArrowTopRightOnSquareIcon className="w-5 h-5" />
-                      </a>
-                    </li>
-                  </ol>
+                  <Education />
                 </Tab.Panel>
                 <Tab.Panel>Content 2</Tab.Panel>
               </Tab.Panels>
