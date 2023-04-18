@@ -1,7 +1,8 @@
 import LoadingSpinner from "@/components/UI/LoadingSpinner";
 import "@/styles/globals.css";
 import "@/styles/styles.css";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import type { AppProps } from "next/app";
 import React from "react";
 

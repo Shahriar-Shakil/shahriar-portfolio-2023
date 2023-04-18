@@ -45,17 +45,14 @@ export const settings = {
   ],
 };
 export const settingsVertical = {
-  className: "vertical-carousel",
-  dots: false,
-  infinite: false,
+  className: "image-carousel",
+  dots: true,
+  infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  rows: 3,
-  slidesPerRow: 1,
-  arrows: false,
-  // vertical: true,
-  // verticalSwiping: true,
-  swipeToSlide: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: false,
   // responsive: [
   //   {
   //     breakpoint: 700,
@@ -68,19 +65,12 @@ export const settingsVertical = {
 };
 export const imageCarousel = {
   className: "imageCarousel",
-  dots: true,
-  infinite: false,
+  dots: false,
+  infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
   swipeToSlide: true,
-  // responsive: [
-  //   {
-  //     breakpoint: 700,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
+  autoplay: true,
+  autoplaySpeed: 3000,
 };

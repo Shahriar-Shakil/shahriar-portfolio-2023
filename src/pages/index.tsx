@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import ProfilePicture from "@/components/UI/ProfilePicture";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
             <Link className="button-primary " href="/about">
               More About Me
             </Link>
-            <Link className="button-primary " href="/">
+            <Link className="button-primary " href="/portfolio">
               Portfolio
             </Link>
           </div>

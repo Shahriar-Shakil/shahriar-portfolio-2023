@@ -1,11 +1,8 @@
 import Layout from "@/components/Layout";
-import ProfilePicture from "@/components/UI/ProfilePicture";
-import Image from "next/image";
-import Link from "next/link";
-import { Tab } from "@headlessui/react";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import Education from "@/components/UI/Education";
 import Experience from "@/components/UI/Experience";
+import ProfilePicture from "@/components/UI/ProfilePicture";
+import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 
 let skills = [
