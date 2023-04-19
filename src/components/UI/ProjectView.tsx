@@ -10,19 +10,20 @@ export default function ProjectView({ data }: Props) {
   return (
     <div className="space-y-5 text-accent-700">
       <div>
-        <Slider {...imageCarousel}>
-          {data.images.map((image: string) => (
-            <Image
-              key={image}
-              src={image}
-              width="720"
-              height="520"
-              alt="project1"
-              className="mx-auto aspect-video	"
-            />
-          ))}
-        </Slider>
-
+        <div className="overflow-hidden  min-h-[30rem] bg-light-alpha-25 border border-light-alpha-40 rounded-[.625rem]">
+          <Slider {...imageCarousel}>
+            {data.images.map((image: string) => (
+              <Image
+                key={image}
+                src={image}
+                width="720"
+                height="520"
+                alt="project1"
+                className="rounded-md mx-auto aspect-video	"
+              />
+            ))}
+          </Slider>
+        </div>
         <h2 className="text-[1.563rem] capitalize mt-5">{data.title}</h2>
       </div>
       <div className="space-y-3">
