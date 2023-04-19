@@ -1,12 +1,19 @@
 import { imageCarousel } from "@/utils";
 import { portfolios } from "@/utils/data";
 import Image from "next/image";
+import { useState } from "react";
 import Slider from "react-slick";
+import ProjectView from "../UI/ProjectView";
 import ProjectViewModal from "../UI/ProjectViewModal";
 
 type Props = {};
 
 export default function PortFolioPage({}: Props) {
+  let [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState({});
+  const handleOpenModal = (value: boolean) => {
+    setIsOpen(value);
+  };
   return (
     <>
       <div className="w-full">
@@ -31,12 +38,22 @@ export default function PortFolioPage({}: Props) {
                 </Slider>
               </div>
               <h3 className="text-[1.25rem] capitalize my-5">{item.title}</h3>
-              <button className="button-primary">View Project</button>
+              <button
+                onClick={() => {
+                  handleOpenModal(true);
+                  setSelected(item);
+                }}
+                className="button-primary"
+              >
+                View Project
+              </button>
             </div>
           ))}
         </div>
       </div>
-      <ProjectViewModal />
+      <ProjectViewModal isOpen={isOpen} handleOpen={handleOpenModal}>
+        <ProjectView data={selected} />
+      </ProjectViewModal>
     </>
   );
 }

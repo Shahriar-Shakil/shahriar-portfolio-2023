@@ -1,23 +1,25 @@
 import React from "react";
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/20/solid";
 type Props = {
-  children: React.ChildNode;
+  children: React.ReactNode;
+  handleOpen: (value: boolean) => void;
+  isOpen: boolean;
 };
 
-export default function ProjectViewModal({}: Props) {
-  let [isOpen, setIsOpen] = useState(true);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
+export default function ProjectViewModal({
+  children,
+  isOpen,
+  handleOpen,
+}: Props) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={closeModal}>
+      <Dialog
+        as="div"
+        className="relative z-10"
+        onClose={() => handleOpen(false)}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -38,7 +40,7 @@ export default function ProjectViewModal({}: Props) {
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full items-center justify-center  py-[2.5rem] px-4 text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -48,7 +50,18 @@ export default function ProjectViewModal({}: Props) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-[60rem] min-h-screen transform overflow-hidden rounded-2xl   bg-light-alpha-25 borer border-light-alpha-40  backdrop-blur-[10px] p-6 text-left align-middle shadow-xl transition-all"></Dialog.Panel>
+              <Dialog.Panel className="w-full max-w-[60rem] min-h-screen transform  rounded-2xl   bg-light-alpha-25 borer border-light-alpha-40  backdrop-blur-[10px] p-[1.875rem] text-left align-middle shadow-xl transition-all relative">
+                <div className="absolute -top-5 -right-5">
+                  <button
+                    onClick={() => handleOpen(false)}
+                    className=" button-circle text-main-color hover:text-white "
+                  >
+                    <XMarkIcon className={` h-6 w-6  transition-all `} />
+                  </button>
+                </div>
+
+                {children}
+              </Dialog.Panel>
             </Transition.Child>
           </div>
         </div>
