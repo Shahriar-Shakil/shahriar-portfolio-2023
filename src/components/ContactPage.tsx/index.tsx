@@ -1,5 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import ContactForm from "./contactForm";
 
 type Props = {};
 
@@ -13,37 +15,7 @@ export default function ContactPage({}: Props) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-0 sm:gap-x-8 lg:gap-x-16">
         <div className="px-4 col-span-2 sm:col-span-1">
-          <form className="space-y-[1.875rem]">
-            <input
-              className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2	 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
-              type="text"
-              placeholder="Name"
-            />
-            <br />
-            <input
-              className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
-              type="text"
-              placeholder="Subject"
-            />
-            <br />
-            <textarea
-              className="w-full h-[7.5rem] py-3 rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500 resize-none	"
-              placeholder="Message"
-            />
-            <br />
-            <button
-              className="button-primary"
-              type="submit"
-              defaultValue="Submit"
-            >
-              Send
-            </button>
-          </form>
+          <ContactForm />
         </div>
         <div className="col-span-2 sm:col-span-1 row-start-1 sm:col-start-2 space-y-[1.875rem] px-4 text-accent-700">
           <div>

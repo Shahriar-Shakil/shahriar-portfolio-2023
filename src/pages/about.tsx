@@ -3,6 +3,7 @@ import Education from "@/components/UI/Education";
 import Experience from "@/components/UI/Experience";
 import ProfilePicture from "@/components/UI/ProfilePicture";
 import { Tab } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment } from "react";
 
 let skills = [
@@ -81,6 +82,18 @@ export default function AboutPage() {
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
+          <div className="flex flex-wrap gap-4">
+            <a
+              className="button-primary"
+              href="/shahriar-resume.pdf"
+              download={"shahriar-cv"}
+            >
+              Download CV
+            </a>
+            <Link className="button-primary" href="/contact">
+              Contact Me
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
