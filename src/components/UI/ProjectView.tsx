@@ -10,7 +10,7 @@ export default function ProjectView({ data }: Props) {
   return (
     <div className="space-y-5 text-accent-700">
       <div>
-        <div className="overflow-hidden  min-h-[30rem] bg-light-alpha-25 border border-light-alpha-40 rounded-[.625rem]">
+        <div className="overflow-hidden   bg-light-alpha-25 border border-light-alpha-40 rounded-[.625rem]">
           <Slider {...imageCarousel}>
             {data.images.map((image: string) => (
               <Image
