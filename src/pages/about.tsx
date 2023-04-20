@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <Layout className="   py-[4.5rem] w-full ">
       <div className="w-full">
-        <h2 className="text-center text-[2.5rem] capitalize mb-[2.5rem] font-medium">
+        <h2 className="text-center text-3xl sm:text-[2.5rem]  capitalize mb-[2.5rem] font-medium">
           About Me
         </h2>
       </div>

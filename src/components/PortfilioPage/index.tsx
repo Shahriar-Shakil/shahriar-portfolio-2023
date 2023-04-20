@@ -17,7 +17,7 @@ export default function PortFolioPage({}: Props) {
   return (
     <>
       <div className="w-full">
-        <h2 className="text-center text-[2.5rem] capitalize mb-[2.5rem] font-medium">
+        <h2 className="text-center text-3xl sm:text-[2.5rem]  capitalize mb-[2.5rem] font-medium">
           Recent Work
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
