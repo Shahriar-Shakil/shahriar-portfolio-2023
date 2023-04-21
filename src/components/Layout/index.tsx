@@ -1,5 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
 
@@ -21,7 +22,18 @@ export default function Layout({ children, className }: Props) {
         <div className="circle-3"></div>
         <div className="circle-4"></div>
       </div>
-      <main className="max-w-[75rem] m-auto  relative  bg-light-alpha-25 borer border-light-alpha-40 min-h-[calc(100vh-4.688rem)] rounded-[1.875rem] backdrop-blur-[10px] overflow-hidden">
+      <motion.main
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 300, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 160,
+          damping: 20,
+          ease: [0.17, 0.67, 0.83, 0.67],
+        }}
+        className="max-w-[75rem] m-auto  relative  bg-light-alpha-25 borer border-light-alpha-40 min-h-[calc(100vh-4.688rem)] rounded-[1.875rem] backdrop-blur-[10px] overflow-hidden"
+      >
         <header className="">
           <div className="absolute z-100 w-full  ">
             <div className="">
@@ -35,10 +47,10 @@ export default function Layout({ children, className }: Props) {
                       >
                         {open ? (
                           <XMarkIcon
-                            className={` h-6 w-6 text-main-color hover:scale-[2] transition-all duration-300 delay-300`}
+                            className={` h-6 w-6 text-main-color hover:scale-[2] transition-all duration-300 `}
                           />
                         ) : (
-                          <Bars3Icon className=" h-8 w-8 text-main-color  hover:rotate-45 transition-all duration-300 delay-300 transform" />
+                          <Bars3Icon className=" h-8 w-8 text-main-color  hover:scale-[1.2] transition-all duration-300  transform" />
                         )}
                       </Disclosure.Button>
                       <Transition
@@ -110,7 +122,7 @@ export default function Layout({ children, className }: Props) {
         >
           {children}
         </section>
-      </main>
+      </motion.main>
     </div>
   );
 }
