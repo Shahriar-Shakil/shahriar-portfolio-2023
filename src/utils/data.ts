@@ -47,8 +47,7 @@ export const portfolios = [
   },
   {
     id: "3",
-    title:
-      "MyFarmBD: Empowering Financial Freedom and Food Security in Bangladesh",
+    title: "MyFarmBD - Empowering Finance and Food Security in Bangladesh",
     about: "",
     tech: ["Next JS", "Redux", "Scss", "SWR"],
     images: [
@@ -66,6 +65,6 @@ export const portfolios = [
     github: "",
     live: "https://www.myfarmbd.com/",
     description:
-      "<h2>MyFarmBD: Empowering Financial Freedom and Food Security in Bangladesh</h2><p>MyFarmBD is a platform that enables people to contribute to achieving food security for Bangladesh while also growing their funds. With a simple, safe, and sustainable investment platform, investors can support real farmers in growing food for the Bangladeshi population. The platform offers a spectrum of investable farms, allowing micro-investors and high network individuals alike to invest in the cause of food security for Bangladesh and achieve financial freedom. </p><p>As a Frontend Developer on this project, I used Next.js and SWR for API calling, Redux for state management, and integrated with the Laravel backend. MyFarmBD's user interface is designed to be user-friendly, engaging, and responsive, with a focus on delivering an intuitive and streamlined user experience. </p>",
+      "<p>MyFarmBD is a platform that enables people to contribute to achieving food security for Bangladesh while also growing their funds. With a simple, safe, and sustainable investment platform, investors can support real farmers in growing food for the Bangladeshi population. The platform offers a spectrum of investable farms, allowing micro-investors and high network individuals alike to invest in the cause of food security for Bangladesh and achieve financial freedom. </p><p>As a Frontend Developer on this project, I used Next.js and SWR for API calling, Redux for state management, and integrated with the Laravel backend. MyFarmBD's user interface is designed to be user-friendly, engaging, and responsive, with a focus on delivering an intuitive and streamlined user experience. </p>",
   },
 ];
