@@ -45,4 +45,27 @@ export const portfolios = [
     description:
       "<p>My React SaaS applications project is a modern and responsive web application built using Next JS, Recoil, Tailwind CSS, and SWR. The project showcases my expertise in building scalable and reliable web applications with an emphasis on user experience and performance.</p><p>As a Frontend Developer, my role in this project was to design and develop the user interface and implement the necessary functionality for a SaaS application. The project features a modern and responsive user interface with seamless navigation, intuitive user flows, and fast loading times.</p><p>The React SaaS applications project is a great example of my proficiency in modern web development technologies and my ability to deliver high-quality work in a timely and efficient manner. ",
   },
+  {
+    id: "3",
+    title:
+      "MyFarmBD: Empowering Financial Freedom and Food Security in Bangladesh",
+    about: "",
+    tech: ["Next JS", "Redux", "Scss", "SWR"],
+    images: [
+      "/images/project4/1.png",
+      "/images/project4/2.png",
+      "/images/project4/3.png",
+      "/images/project4/4.png",
+      "/images/project4/5.png",
+      "/images/project4/6.png",
+      "/images/project4/7.png",
+      "/images/project4/8.png",
+      "/images/project4/9.png",
+    ],
+    role: "Frontend Developer",
+    github: "",
+    live: "https://www.myfarmbd.com/",
+    description:
+      "<h2>MyFarmBD: Empowering Financial Freedom and Food Security in Bangladesh</h2><p>MyFarmBD is a platform that enables people to contribute to achieving food security for Bangladesh while also growing their funds. With a simple, safe, and sustainable investment platform, investors can support real farmers in growing food for the Bangladeshi population. The platform offers a spectrum of investable farms, allowing micro-investors and high network individuals alike to invest in the cause of food security for Bangladesh and achieve financial freedom. </p><p>As a Frontend Developer on this project, I used Next.js and SWR for API calling, Redux for state management, and integrated with the Laravel backend. MyFarmBD's user interface is designed to be user-friendly, engaging, and responsive, with a focus on delivering an intuitive and streamlined user experience. </p>",
+  },
 ];
