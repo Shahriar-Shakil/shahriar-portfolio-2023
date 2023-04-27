@@ -10,11 +10,13 @@ import "slick-carousel/slick/slick.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { AnimatePresence } from "framer-motion";
 
+import "react-toastify/dist/ReactToastify.css";
 // Tell Font Awesome to skip adding the CSS automatically
 // since it's already imported above
 config.autoAddCss = false;
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = React.useState(true);
+
   React.useEffect(() => {
     const timeOut = setTimeout(() => {
       setLoading(false);
