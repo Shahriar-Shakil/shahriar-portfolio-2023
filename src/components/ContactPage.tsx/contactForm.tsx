@@ -17,26 +17,33 @@ export default function ContactForm({}: Props) {
     reset,
     formState: { errors },
   } = useForm<Inputs>();
+  const [loading, setLoading] = useState(false);
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     // e.preventDefault();
-    const rawResponse = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    const content = await rawResponse.json();
-    if (content.status === "success") {
-      reset();
-      toast.success(content.message, {
-        position: toast.POSITION.BOTTOM_CENTER,
+    setLoading(true);
+    try {
+      const rawResponse = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
-    } else {
-      toast.error(content.message, {
-        position: toast.POSITION.BOTTOM_CENTER,
-      });
+      const content = await rawResponse.json();
+      if (content.status === "success") {
+        reset();
+        toast.success(content.message, {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      } else {
+        toast.error(content.message, {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      }
+    } catch (error) {
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -94,7 +101,12 @@ export default function ContactForm({}: Props) {
           )}
         </div>
 
-        <button className="button-primary" type="submit" defaultValue="Submit">
+        <button
+          disabled={loading}
+          className="button-primary disabled:opacity-25"
+          type="submit"
+          defaultValue="Submit"
+        >
           Send
         </button>
       </form>
