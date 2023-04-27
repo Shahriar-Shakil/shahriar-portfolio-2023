@@ -16,12 +16,11 @@ export default async function handler(
     return res.status(405).send({ message: "Only POST requests are allowed" });
   }
   const body = req.body as sheetForm;
-
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY,
+        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
       },
       scopes: [
         "https://www.googleapis.com/auth/drive",
