@@ -1,92 +1,99 @@
 import React, { FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 type Props = {};
+type Inputs = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
 
 export default function ContactForm({}: Props) {
-  const [fullname, setFullname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    let form = {
-      name: fullname,
-      email,
-      phone,
-      message,
-    };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    // e.preventDefault();
     const rawResponse = await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify(data),
     });
     const content = await rawResponse.json();
-    console.log(content, "success");
     if (content.status === "success") {
-      setMessage("");
-      setPhone("");
-      setFullname("");
-      setEmail("");
-      toast.success(content.message);
+      reset();
+      toast.success(content.message, {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
     } else {
-      toast.error(content.message);
+      toast.error(content.message, {
+        position: toast.POSITION.BOTTOM_CENTER,
+      });
     }
   };
   return (
     <>
-      <form className="space-y-[1.875rem]" onSubmit={handleSubmit}>
-        <input
-          className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2	 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
-          name="fullname"
-          type="text"
-          placeholder="Name"
-          required
-          value={fullname}
-          onChange={(e) => {
-            setFullname(e.target.value);
-          }}
-        />
-        <br />
-        <input
-          className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          required
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
+      <form className="space-y-[1.875rem]" onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <input
+            className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2	 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
+            type="text"
+            placeholder="Name"
+            {...register("name", { required: true })}
+          />
+          {errors.name?.type === "required" && (
+            <p role="alert" className="text-sm text-accent-light-100 mt-1 ">
+              Name is required
+            </p>
+          )}
+        </div>
+        <div>
+          <input
+            className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
+            type="email"
+            placeholder="Email"
+            {...register("email", { required: true })}
+          />
+          {errors.email?.type === "required" && (
+            <p role="alert" className="text-sm text-accent-light-100 mt-1 ">
+              A valid Email is required
+            </p>
+          )}
+        </div>
+
         <input
           className="w-full h-[3.125rem] rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500"
           type="text"
           placeholder="Phone Number"
-          name="phone"
-          value={phone}
-          required
-          onChange={(e) => {
-            setPhone(e.target.value);
-          }}
+          {...register("phone", { required: false })}
         />
-        <br />
-        <textarea
-          className="w-full h-[7.5rem] py-3 rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500 resize-none	"
-          placeholder="Message"
-          name="message"
-          value={message}
-          required
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        />
-        <br />
+        <div>
+          <textarea
+            className="w-full h-[7.5rem] py-3 rounded-[1.563rem] font-normal text-base bg-light-alpha-25 px-[1.25rem] text-accent-700 border-2 border-transparent focus:border-light-alpha-40 transition-all duration-300 outline-none overflow-hidden placeholder-gray-500 resize-none	"
+            placeholder="Message"
+            {...register("message", { required: true, maxLength: 300 })}
+          />
+          {errors.message?.type === "required" && (
+            <p role="alert" className="text-sm text-accent-light-100 mt-1 ">
+              Message is required
+            </p>
+          )}
+          {errors.message?.type === "maxLength" && (
+            <p role="alert" className="text-sm text-accent-light-100 mt-1 ">
+              Please Write a small massage under 300 characters. I&apos;ll
+              Contact with you as soon as possible
+            </p>
+          )}
+        </div>
+
         <button className="button-primary" type="submit" defaultValue="Submit">
           Send
         </button>
