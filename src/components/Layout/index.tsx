@@ -1,6 +1,7 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import Link from "next/link";
 import React, { Fragment, useState } from "react";
 
@@ -16,6 +17,21 @@ export default function Layout({ children, className }: Props) {
   };
   return (
     <div>
+      <Head>
+        <meta name="title" content="Shahirar Kabir" />
+        <meta
+          name="description"
+          content="I'm a Front-end developer with 2 years of experience building web applications with JavaScript ES6, React, Next, Redux, HTML, CSS, and other technologies."
+        />
+        <meta property="og:url" content={"https://shahriar.netlify.app/"} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Shahirar Kabir" />
+        <meta
+          property="og:description"
+          content="I'm a Front-end developer with 2 years of experience building web applications with JavaScript ES6, React, Next, Redux, HTML, CSS, and other technologies."
+        />
+        <meta property="og:image" content="/images/shahriar-red.jpg" />
+      </Head>
       <div className="bg-circle">
         <div className="circle-1"></div>
         <div className="circle-2"></div>
