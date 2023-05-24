@@ -28,7 +28,7 @@ export default function Document() {
           property="og:description"
           content="I'm a Front-end developer with 2 years of experience building web applications with JavaScript ES6, React, Next, Redux, HTML, CSS, and other technologies."
         />
-        <meta property="og:image" content={"/images/shahriar-red.jpg"} />
+        <meta property="og:image" content={"/images/shahriar-red-meta.jpg"} />
       </Head>
       <body>
         <Main />
