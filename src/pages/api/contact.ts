@@ -18,7 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const body = req.body as sheetForm;
   try {
-    // Prepare the email details
     const email = {
       from: process.env.RESEND_CONTACT_EMAIL!,
       to: process.env.RESEND_CONTACT_EMAIL!,
@@ -31,10 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `,
     };
 
-    // Send the email using Resend API
-    const response = await resend.emails.send(email);  // Use the `emails.send` method
+    const response = await resend.emails.send(email);  
 
-    // Respond with success if email is sent
     return res.status(201).json({
       status: "success",
       message: "Message sent successfully",
