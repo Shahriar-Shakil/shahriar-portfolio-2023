@@ -1,11 +1,32 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import React from "react";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 
 type Props = {};
 
 export default function Education({}: Props) {
   return (
     <ol className="relative border-l border-main-color dark:border-gray-700">
+      <li className="mb-10 ml-4">
+        <div className="absolute w-3 h-3 bg-main-color rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
+        <time className="mb-1 text-sm font-normal leading-none text-main-color dark:text-gray-500">
+          2024
+        </time>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Full Stack Web Development with MERN -{" "}
+          <span className="font-light text-[18px]">Ostad</span>
+        </h3>
+        <p className="mt-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        Gained hands-on experience with MongoDB, Express, React, and Node.js to build full-stack web applications. Focused on developing scalable, maintainable, and efficient web solutions.
+        </p>
+        <a
+          className="mt-2  button-primary "
+          href="https://ostad.app/share/certificate/c21111-shahriar-kabir"
+          target="_blank"
+        >
+          <span className="">View Profile</span>
+          <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+        </a>
+      </li>
       <li className="mb-10 ml-4">
         <div className="absolute w-3 h-3 bg-main-color rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700" />
         <time className="mb-1 text-sm font-normal leading-none text-main-color dark:text-gray-500">

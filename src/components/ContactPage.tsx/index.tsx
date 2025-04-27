@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import ContactForm from "./contactForm";
 
 type Props = {};
@@ -20,11 +20,11 @@ export default function ContactPage({}: Props) {
         <div className="col-span-2 sm:col-span-1 row-start-1 sm:col-start-2 space-y-[1.875rem] px-4 text-accent-700">
           <div>
             <h3 className="text-[1.25rem] mb-[5px]">Email</h3>
-            <p>webdev.shakil@gmail.com</p>
+            <p>toshahriarshakil@gmail.com</p>
           </div>
           <div>
             <h3 className="text-[1.25rem] mb-[5px]">Phone</h3>
-            <p>+8801780503417</p>
+            <p>+8801790590870</p>
           </div>
           <div className="w-full">
             <h3 className="text-[1.25rem] mb-3">Follow Me</h3>

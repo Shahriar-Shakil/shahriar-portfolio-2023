@@ -1,5 +1,39 @@
 export const portfolios = [
   {
+    "id": "11",
+    "title": "AdBrain.io",
+    "about": "A platform for AI-driven marketing solutions, providing businesses with intelligent ad targeting and optimization.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Thanos AI API", "SherpAPI", "OpenAI"],
+    "images": ["/images/project20/1.png", "/images/project20/2.png","/images/project20/3.png"],
+    "role": "Fullstack developer Developer",
+    "github": "",
+    "live": "https://adbrain.io/",
+    "description": "<p>AdBrain.io is an AI-powered platform that helps businesses optimize ad campaigns. Built with <strong>React</strong>, <strong>Node.js</strong>, and <strong>Express</strong>, the platform integrates <strong>Thanos AI API</strong> for smart targeting, <strong>SherpAPI</strong> for Google Analytics and shopping insights, and <strong>OpenAI</strong> for advanced keyword research. The back-end utilizes <strong>MongoDB</strong> for efficient data management and scaling.</p><p>As a <strong>Full Stack Developer</strong>, I was responsible for both the front-end UI development using <strong>React</strong> and <strong>Tailwind CSS</strong>, and back-end API design using <strong>Node.js</strong> and <strong>Express</strong>. I also integrated third-party APIs like <strong>Thanos AI</strong> and <strong>SherpAPI</strong> to enhance ad targeting and analytics. Additionally, I worked on database management with <strong>MongoDB</strong>, ensuring scalability and data integrity.</p>"
+  },
+  {
+    "id": "10",
+    "title": "Neo Combat Lab",
+    "about": "Business Landing Page for Neo Combat Lab - Training and Video Review Platform",
+    "tech": ["Next.js", "Typescript", "Tailwind CSS", "CMS"],
+    "images": ["/images/project10/1.png", "/images/project10/2.png","/images/project10/3.png","/images/project10/4.png","/images/project10/5.png"],
+    "role": "Freelance Web Developer",
+    "github": "",
+    "live": "https://neocombatlab.com/",
+    "description": "<p>Neo Combat Lab is a modern business landing page built for an innovative jiu jitsu and combat training platform. Developed using <strong>Next.js</strong> and <strong>Typescript</strong>, the site is designed for maximum responsiveness and user experience. The front-end is powered by <strong>Tailwind CSS</strong>, creating an intuitive and sleek layout.</p><p>The platform integrates with <strong>Contentful CMS</strong> to enable easy content management, providing flexibility for dynamic content updates. It allows users to access training videos, review them, and engage with their coaches directly through the platform, enhancing their learning process."
+  },
+  {
+    "id": "100",
+ "title": "Custom Neon Signs",
+  "about": "Custom Neon Sign creation and design platform for businesses and individuals.",
+  "tech": ["JavaScript","Jquery", "HTML", "CSS", ],
+    "images": ["/images/project100/1.png", "/images/project100/2.png",],
+    "role": "Freelance Web Developer",
+    "github": "",
+  "live": "https://signzycreator.netlify.app/", 
+  "description": "<p>Custom Neon Signs is a web platform that allows users to create their own custom neon signs easily. Built with <strong>JavaScript</strong> , the platform lets users design and preview neon signs by entering text, choosing fonts, and selecting sizes. It also provides multiple customization options such as backboard designs and plug type selections.</p><p>The website enables customers to visualize their neon sign before making a purchase, offering an intuitive user interface powered by <strong>CSS</strong> and <strong>Jquery</strong>. The app features a responsive layout to provide a seamless experience on any device."
+  },
+  
+  {
     id: "1",
     title: "Headless CMS Blog",
     about: "Blog Site for Enterprise",
@@ -67,23 +101,5 @@ export const portfolios = [
     description:
       "<p>MyFarmBD is a platform that enables people to contribute to achieving food security for Bangladesh while also growing their funds. With a simple, safe, and sustainable investment platform, investors can support real farmers in growing food for the Bangladeshi population. The platform offers a spectrum of investable farms, allowing micro-investors and high network individuals alike to invest in the cause of food security for Bangladesh and achieve financial freedom. </p><p>As a Frontend Developer on this project, I used Next.js and SWR for API calling, Redux for state management, and integrated with the Laravel backend. MyFarmBD's user interface is designed to be user-friendly, engaging, and responsive, with a focus on delivering an intuitive and streamlined user experience. </p>",
   },
-  // {
-  //   id: "5",
-  //   title: "A simple animated Card",
-  //   about: "",
-  //   tech: ["HTML", "CSS", "Javascript"],
-  //   images: ["/images/project5/1.png"],
-  //   role: "Frontend Developer",
-  //   github: "https://github.com/Shahriar-Shakil/animated-bg-card",
-  //   live: "https://animated-bg-card.netlify.app/",
-  //   description: `<h1>Randomly Animated Boxes</h1>
-  //   <p>The "Randomly Animated Boxes" project is a dynamic web application that generates a visually engaging display of colored boxes scattered randomly across the height and width of the viewport. The project uses HTML, CSS, and JavaScript to create a canvas of 100 boxes, where 20% of them belong to a special class. These boxes are animated with varying properties:</p>
-  //   <ul>
-  //       <li><strong>Color:</strong> The boxes change colors randomly at their own speed.</li>
-  //       <li><strong>Position:</strong> The boxes are positioned randomly across the viewport.</li>
-  //       <li><strong>Animation Delay:</strong> Each "animated-box" has a random delay before starting its animation, creating a staggered effect.</li>
-  //       <li><strong>Animation Duration:</strong> Each "animated-box" has a random animation duration, resulting in boxes moving at different speeds.</li>
-  //   </ul>
-  //   <p>The combination of these features results in a visually dynamic and interactive web page that demonstrates the power of web technologies in creating engaging user experiences.</p>`,
-  // },
+
 ];
